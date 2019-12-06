@@ -9,6 +9,7 @@ module.exports = {
   ],
   rules: {
     'function-url-quotes': 'always',
+    'declaration-empty-line-before': 'never',
     'string-quotes': 'single',
     'order/properties-order': [
       '@extend',
