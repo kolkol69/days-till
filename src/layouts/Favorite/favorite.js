@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { NoMovies } from '../styles/NoMovies';
-import { Container } from '../styles/Container';
-import { StyledFavoriteMovie } from '../styles/StyledFavoriteMovie';
-import { addMovieToFavorite } from '../actions';
-import MovieLayout from '../components/MovieLayout';
+import { NoMovies } from 'styles/NoMovies';
+import { Container } from 'styles/Container';
+import { StyledFavoriteMovie } from 'styles/StyledFavoriteMovie';
+import { addMovieToFavorite } from 'actions';
+import MovieLayout from 'components/MovieLayout';
+import NoMovieComponent from 'components/NoMovieComponent';
 
 // eslint-disable-next-line no-shadow
 const Favorite = ({ favorite, addMovieToFavorite }) => {
@@ -33,8 +34,7 @@ const Favorite = ({ favorite, addMovieToFavorite }) => {
   }
   return (
     <NoMovies>
-      You did not add any movies to favorite
-      <span role="img" aria-label="sad face">😐</span>
+      <NoMovieComponent />
     </NoMovies>
   );
 };

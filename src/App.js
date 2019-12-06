@@ -7,8 +7,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './store';
 import { GlobalStyle, theme } from './styles/GlobalStyle';
 
-import Main from './layouts/main';
-import Favorite from './layouts/favorite';
+import Main from './layouts/Main/main';
+import Favorite from './layouts/Favorite/favorite';
 import Navigation from './components/Navigation';
 
 const App = () => (
