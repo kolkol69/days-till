@@ -1,34 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-import NotFoundImage from '../../assets/images/movie_not_found.jpg';
-import { createImageLink } from '../../utils/utils';
+import Image from 'components/Image';
+import NotFoundImage from 'assets/images/movie_not_found.jpg';
+import { createImageLink } from 'utils/utils';
+import { propTypes, defaultProps } from './propTypes';
 
 const MovieImage = ({ path, title }) => {
   const renderImage = path ? (
-    <img
-      data-testid="movieImage"
-      src={createImageLink(path)}
-      alt={title}
-    />
+    <Image src={createImageLink(path)} alt={title} />
   ) : (
-    <img
-      data-testid="notFoundImage"
-      src={NotFoundImage}
-      alt="not found"
-    />
+    <Image src={NotFoundImage} alt="not found" />
   );
 
   return renderImage;
 };
 
-MovieImage.propTypes = {
-  path: PropTypes.string,
-  title: PropTypes.string,
-};
+MovieImage.propTypes = propTypes;
+MovieImage.defaultProps = defaultProps;
 
-MovieImage.defaultProps = {
-  path: null,
-  title: '',
-};
 export default MovieImage;
