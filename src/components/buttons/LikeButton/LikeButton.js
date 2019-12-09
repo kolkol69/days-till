@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import heartIcon from 'assets/icons/icon_heart.svg';
-import Image from 'components/Image';
+import HeartIcon from 'components/HeartIcon';
 
 import { StyledLikeButton } from 'styles/StyledLikeButton';
 
@@ -11,10 +10,7 @@ const LikeButton = ({ active, addToFavorite }) => (
     onClick={addToFavorite}
     active={active}
   >
-    <Image
-      src={heartIcon}
-      alt="like movie"
-    />
+    <HeartIcon />
   </StyledLikeButton>
 );
 
